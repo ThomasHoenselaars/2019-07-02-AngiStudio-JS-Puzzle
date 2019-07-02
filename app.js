@@ -150,13 +150,13 @@ console.log(borden);
 // Kijkrichting & Current Kijkrichting
 // 0 = Noord, 1 = Oost, 2 = Zuid, 3 = West
 const kijkRichting = [0, 1, 2, 3];
-let currentKijkRichting = 0;
+let currentKijkRichting = kijkRichting[0];
 
 console.log(currentKijkRichting);
 
 // currentKijkRichting = kijkRichting[currentKijkRichting + 1];
 
-// Array met N,Z,O,W / 0, 1, 2, 3
+// Array met N,O,Z,W / 0, 1, 2, 3
 //  R = kijkRichting[current +1]
 //  L = kijkRichting[current -1]
 // Als Current = 0  && Bord = L
@@ -193,16 +193,10 @@ borden.forEach(bord => {
 
     console.log(currentKijkRichting);
   } else if (richting === "R" && currentKijkRichting === 3) {
-    currentKijkRichting = 0;
+    currentKijkRichting = kijkRichting[0];
 
     if (currentKijkRichting === 0) {
       y = y + stappen;
-    } else if (currentKijkRichting === 1) {
-      x = x + stappen;
-    } else if (currentKijkRichting === 2) {
-      y = y - stappen;
-    } else if (currentKijkRichting === 3) {
-      x = x - stappen;
     }
 
     console.log(currentKijkRichting);
@@ -221,15 +215,9 @@ borden.forEach(bord => {
 
     console.log(currentKijkRichting);
   } else if (richting === "L" && currentKijkRichting === 0) {
-    currentKijkRichting = 3;
+    currentKijkRichting = kijkRichting[3];
 
-    if (currentKijkRichting === 0) {
-      y = y + stappen;
-    } else if (currentKijkRichting === 1) {
-      x = x + stappen;
-    } else if (currentKijkRichting === 2) {
-      y = y - stappen;
-    } else if (currentKijkRichting === 3) {
+    if (currentKijkRichting === 3) {
       x = x - stappen;
     }
 
