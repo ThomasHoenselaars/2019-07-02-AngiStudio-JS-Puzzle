@@ -1,8 +1,5 @@
 // Start coordinaten 0,0 facing north
 
-// Bord zegt.. L of R + getal
-// L = -1
-// R = +1
 const borden = [
   "R2",
   "L3",
@@ -146,6 +143,10 @@ const borden = [
 
 console.log(borden);
 
+// Bord zegt.. L of R + getal
+// L = -1
+// R = +1
+
 // Kijkrichting & Current Kijkrichting
 // 0 = Noord, 1 = Oost, 2 = Zuid, 3 = West
 const kijkRichting = [0, 1, 2, 3];
@@ -153,14 +154,7 @@ let currentKijkRichting = 0;
 
 console.log(currentKijkRichting);
 
-function logArrayElements(element, index) {
-  console.log("a[" + index + "] = " + element);
-}
-
-kijkRichting.forEach(logArrayElements);
-
 // currentKijkRichting = kijkRichting[currentKijkRichting + 1];
-// console.log(currentKijkRichting);
 
 // Array met N,Z,O,W / 0, 1, 2, 3
 //  R = kijkRichting[current +1]
@@ -182,19 +176,19 @@ const coords = `${x}, ${y}`;
 
 borden.forEach(bord => {
   let richting = bord.charAt(0);
-  let stappen = bord.substr(1, 3);
+  let stappen = parseInt(bord.substr(1, 3));
 
   if (richting === "R" && currentKijkRichting < 3) {
     currentKijkRichting = kijkRichting[currentKijkRichting + 1];
 
     if (currentKijkRichting === 0) {
-      y = y + parseInt(stappen, 10);
+      y = y + stappen;
     } else if (currentKijkRichting === 1) {
-      x = x + parseInt(stappen, 10);
+      x = x + stappen;
     } else if (currentKijkRichting === 2) {
-      y = y - parseInt(stappen, 10);
+      y = y - stappen;
     } else if (currentKijkRichting === 3) {
-      x = x - parseInt(stappen, 10);
+      x = x - stappen;
     }
 
     console.log(currentKijkRichting);
@@ -202,13 +196,13 @@ borden.forEach(bord => {
     currentKijkRichting = 0;
 
     if (currentKijkRichting === 0) {
-      y = y + parseInt(stappen, 10);
+      y = y + stappen;
     } else if (currentKijkRichting === 1) {
-      x = x + parseInt(stappen, 10);
+      x = x + stappen;
     } else if (currentKijkRichting === 2) {
-      y = y - parseInt(stappen, 10);
+      y = y - stappen;
     } else if (currentKijkRichting === 3) {
-      x = x - parseInt(stappen, 10);
+      x = x - stappen;
     }
 
     console.log(currentKijkRichting);
@@ -216,13 +210,13 @@ borden.forEach(bord => {
     currentKijkRichting = kijkRichting[currentKijkRichting - 1];
 
     if (currentKijkRichting === 0) {
-      y = y + parseInt(stappen, 10);
+      y = y + stappen;
     } else if (currentKijkRichting === 1) {
-      x = x + parseInt(stappen, 10);
+      x = x + stappen;
     } else if (currentKijkRichting === 2) {
-      y = y - parseInt(stappen, 10);
+      y = y - stappen;
     } else if (currentKijkRichting === 3) {
-      x = x - parseInt(stappen, 10);
+      x = x - stappen;
     }
 
     console.log(currentKijkRichting);
@@ -230,13 +224,13 @@ borden.forEach(bord => {
     currentKijkRichting = 3;
 
     if (currentKijkRichting === 0) {
-      y = y + parseInt(stappen, 10);
+      y = y + stappen;
     } else if (currentKijkRichting === 1) {
-      x = x + parseInt(stappen, 10);
+      x = x + stappen;
     } else if (currentKijkRichting === 2) {
-      y = y - parseInt(stappen, 10);
+      y = y - stappen;
     } else if (currentKijkRichting === 3) {
-      x = x - parseInt(stappen, 10);
+      x = x - stappen;
     }
 
     console.log(currentKijkRichting);
