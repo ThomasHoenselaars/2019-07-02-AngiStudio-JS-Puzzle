@@ -172,7 +172,7 @@ console.log(currentKijkRichting);
 let x = 0;
 let y = 0;
 
-const coords = `${x}, ${y}`;
+let coords = `${x}, ${y}`;
 
 borden.forEach(bord => {
   let richting = bord.charAt(0);
@@ -195,9 +195,7 @@ borden.forEach(bord => {
   } else if (richting === "R" && currentKijkRichting === 3) {
     currentKijkRichting = kijkRichting[0];
 
-    if (currentKijkRichting === 0) {
-      y = y + stappen;
-    }
+    y = y + stappen;
 
     console.log(currentKijkRichting);
   } else if (richting === "L" && currentKijkRichting > 0) {
@@ -217,9 +215,7 @@ borden.forEach(bord => {
   } else if (richting === "L" && currentKijkRichting === 0) {
     currentKijkRichting = kijkRichting[3];
 
-    if (currentKijkRichting === 3) {
-      x = x - stappen;
-    }
+    x = x - stappen;
 
     console.log(currentKijkRichting);
   }
