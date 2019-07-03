@@ -1,4 +1,27 @@
-// Start coordinaten 0,0 facing north
+// GEDACHTENPROCES
+// Start coordinaten 0,0 met gezicht naar het NOORDEN
+// Bord zegt.. L of R + getal
+// Windrichtingen als een klok, dan:
+// L = -1
+// R = +1
+
+// Kijkrichting & Current Kijkrichting
+// 0 = Noord, 1 = Oost, 2 = Zuid, 3 = West
+
+// updaten van currentKijkRichting = kijkRichting[currentKijkRichting +/- 1];
+
+// Array met N,O,Z,W / 0, 1, 2, 3
+//  R = kijkRichting[current +1]
+//  L = kijkRichting[current -1]
+// Als Current = 0  && Bord = L
+//  -> Kijkrichting[3], naar einde van array
+// Als Current = 3  && Bord = R
+//  -> Kijkrichting[0], terug naar begin van array
+
+// ALS Kijkrichting = N -> x ++ met aantal stappen
+// ALS Kijkrichting = Z -> x -- met aantal stappen
+// ALS Kijkrichting = O -> y ++ met aantal stappen
+// ALS Kijkrichting = N -> y -- met aantal stappen
 
 const borden = [
   "R2",
@@ -143,31 +166,10 @@ const borden = [
 
 console.log(borden);
 
-// Bord zegt.. L of R + getal
-// L = -1
-// R = +1
-
-// Kijkrichting & Current Kijkrichting
-// 0 = Noord, 1 = Oost, 2 = Zuid, 3 = West
 const kijkRichting = [0, 1, 2, 3];
 let currentKijkRichting = kijkRichting[0];
 
 console.log(currentKijkRichting);
-
-// currentKijkRichting = kijkRichting[currentKijkRichting + 1];
-
-// Array met N,O,Z,W / 0, 1, 2, 3
-//  R = kijkRichting[current +1]
-//  L = kijkRichting[current -1]
-// Als Current = 0  && Bord = L
-//  -> Kijkrichting[3]
-// Als Current = 3  && Bord = R
-//  -> Kijkrichting[0]
-
-// ALS Kijkrichting = N -> x +
-// ALS Kijkrichting = Z -> x -
-// ALS Kijkrichting = O -> y +
-// ALS Kijkrichting = N -> y -
 
 let x = 0;
 let y = 0;
