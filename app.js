@@ -163,7 +163,10 @@ const borden = [
   "R2",
   "L2"
 ];
+
+// Testarray's om te controleren of het programma klopt
 // const borden = ["L2", "L2", "L2"];
+// const borden = ["R5", "L5", "R5", "R3"];
 
 console.log(borden);
 
@@ -174,8 +177,6 @@ console.log(currentKijkRichting);
 
 let x = 0;
 let y = 0;
-
-let coords = `${x}, ${y}`;
 
 borden.forEach(bord => {
   let richting = bord.charAt(0);
@@ -225,4 +226,4 @@ borden.forEach(bord => {
   console.log(x, y);
 });
 
-// Antwoord coordinaten -123,-123 = 246 blokken verwijderd
+// Antwoord coordinaten na laatste foreach: -123,-123 = 246 blokken verwijderd
