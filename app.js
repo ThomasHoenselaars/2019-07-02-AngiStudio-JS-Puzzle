@@ -163,6 +163,7 @@ const borden = [
   "R2",
   "L2"
 ];
+// const borden = ["L2", "L2", "L2"];
 
 console.log(borden);
 
