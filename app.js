@@ -18,10 +18,10 @@
 // Als Current = 3  && Bord = R
 //  -> Kijkrichting[0], terug naar begin van array
 
-// ALS Kijkrichting = N -> x ++ met aantal stappen
-// ALS Kijkrichting = Z -> x -- met aantal stappen
-// ALS Kijkrichting = O -> y ++ met aantal stappen
-// ALS Kijkrichting = N -> y -- met aantal stappen
+// ALS Kijkrichting = N -> y ++ met aantal stappen
+// ALS Kijkrichting = Z -> y -- met aantal stappen
+// ALS Kijkrichting = O -> x ++ met aantal stappen
+// ALS Kijkrichting = W -> x -- met aantal stappen
 
 const borden = [
   "R2",
